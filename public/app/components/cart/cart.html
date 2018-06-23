@@ -1,0 +1,32 @@
+<header>
+    <ul>
+      <ul id="shopbag" class="list-group">
+          <li class="dropdown list-group-item">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+                  <div id="shopbag-img"><img src="./images/shopping_bag1.jpg">
+                  <span class="badge ">{{x.qty}}</span>
+                </div>
+              </a>
+              <ul class="dropdown-menu cart-list">
+                  <li ng-repeat="x in cart">
+                      <a href="#" class="photo"><img src="IMAGE_ADDRESS" class="cart-thumb" alt="" /></a>
+                      <h6><a href="#">Delica omtantur </a></h6>
+                      <p>2x - <span class="price">$99.99</span></p>
+                  </li>
+
+                  -- More List --
+                  <li class="total">
+                      <span class="pull-right"><strong>Total</strong>: $0.00</span>
+                      <a href="#" class="btn btn-default btn-cart">Cart</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+
+      <ul>
+				<li ng-repeat="x in cart">
+					{{x.title}} {{x.cost | currency}}
+				</li>
+			</ul>
+    </ul>
+</header>

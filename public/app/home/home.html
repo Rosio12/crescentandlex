@@ -1,0 +1,197 @@
+<!-- <h2>{{title}}</h2>  -->
+ <!-- <div ui-grid="grid" class="myGrid"></div>  -->
+<!-- <h2>{{love}}</h2>
+<h2>{{person.name}}</h2> -->
+
+<!--
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+-->
+		<div id="collections-products" class="container-fluid">
+			<div class="row" align="center">
+				<div class="col">
+					<div class="container">
+					  <h3>CANDLE COLLECTIONS</h3>
+					  <ul class="nav nav-tabs">
+					    <li class="active"><a href="#pure-scents" data-toggle="tab">pure scents</a></li>
+					    <li><a href="#wine-experiences" data-toggle="tab">wine experiences</a></li>
+		            	<li><a href="#seasonal-scents" data-toggle="tab">seasonal scents</a></li>
+		            	<li><a class="button" href="#destinations-scents" data-toggle="tab">Scents that take you away</a></li>
+		        	</ul>
+					</div>
+		      	</div>
+		    </div>
+		</div>
+
+			<ul>
+				<li ng-repeat="x in cart">
+					{{x.title}} {{x.cost | currency}}
+				</li>
+			</ul>
+
+	    <!-- Tab panes -->
+	    <div class="tab-content">
+	        <div class="tab-pane active" id="pure-scents">
+
+	            <div id="pure-scents-products" class="row">
+					<div class="container">
+
+				      <!--TAB PURE SCENTS -->
+					    <div class="row">
+					        <div class="col-6 col-sm-6 col-md-4" ng-repeat="x in candles.pure">
+					            <div class="card">
+					              	<img class="card-img-top" src="{{x.image}}" alt="Card image cap"/>
+					              		<div class="card-body"</div>
+						                <h5 class="card-title pull-left">{{x.title}}</h5>
+														<h5 class="pull-right">{{x.price | currency}}</h5>
+														<br />
+							                <p class="card-text">{{x.description}}</p>
+                              <a href="#" class="btn btn-outline-white">View Product Details</a>
+                              <a href="#" class="btn btn-outline-dark" ng-click="add(x)">Add to Bag</a>
+					              		</div>
+					            </div>
+					        </div>
+				      	</div>
+					</div>
+				</div>
+	        </div>
+
+ <!--TAB WINE SCENTS -->
+	        <div class="tab-pane" id="wine-experiences">
+
+	            <div id="wine-experiences-products" class="row">
+		            <div class="container">
+					    <div class="row">
+					        <div class="col-6 col-sm-6 col-md-3" ng-repeat="x in candles.wine">
+					            <div class="card">
+					              	<img class="card-img-top" src="{{x.image}}" alt="Card image cap">
+                            <div class="card-body"</div>
+															<h5 class="card-title pull-left">{{x.title}}</h5>
+															<h5 class="pull-right">{{x.price | currency}}</h5>
+															<br />
+                              <p class="card-text">{{x.description}}</p>
+                              <a href="#" class="btn btn-outline-white">View Product Details</a>
+                              <a href="#" class="btn btn-outline-dark" ng-click="add(x)">Add to Bag</a>
+                            </div>
+					            </div>
+					        </div>
+
+
+					    </div>
+					</div>
+				</div>
+	        </div>
+
+ <!--TAB SEASONAL SCENTS -->
+
+	        <div class="tab-pane" id="seasonal-scents">
+
+	            <div id="seasonal-scents-products" class="row">
+	        		<div class="container">
+				      	<div class="row">
+					        <div class="col-6 col-sm-6 col-md-4"ng-repeat="x in candles.seasonal">
+					            <div class="card">
+					              	<img class="card-img-top" src="{{x.image}}" alt="Card image cap">
+                            <div class="card-body"</div>
+															<h5 class="card-title pull-left">{{x.title}}</h5>
+															<h5 class="pull-right">{{x.price | currency}}</h5>
+															<br />
+                              <p class="card-text">{{x.description}}</p>
+                              <a href="#" class="btn btn-outline-white">View Product Details</a>
+                              <a href="#" class="btn btn-outline-dark" ng-click="add(x)">Add to Bag</a>
+                            </div>
+					            </div>
+					        </div>
+
+					    </div>
+				    </div>
+				</div>
+	        </div>
+
+<!--Destination Scents -->
+	        <div class="tab-pane" id="destinations-scents">
+
+	            <div id="wine-experiences-products" class="row">
+		            <div class="container">
+								    <div class="row">
+								        <div class="col-6 col-sm-6 col-md-3" ng-repeat="x in candles.destination">
+								            <div class="card">
+								              	<img class="card-img-top" src="{{x.image}}" alt="Card image cap">
+			                            <div class="card-body"</div>
+																		<h5 class="card-title pull-left">{{x.title}}</h5>
+																		<h5 class="pull-right">{{x.price | currency}}</h5>
+																		<br/>
+			                              <p class="card-text">{{x.description}}</p>
+			                              <a href="#" class="btn btn-outline-white">View Product Details</a>
+			                              <a href="#" class="btn btn-outline-dark" ng-click="add(x)" >Add to Bag</a>
+			                            </div>
+								            	</div>
+								        </div>
+								    	</div>
+									</div>
+								</div>
+	      	</div>
+
+    	</div>
+
+				    <!-- Modal -->
+				    <div id="checkoutModal" class="modal fade">
+
+				      <div class="modal-dialog">
+				        <div class="modal-content">
+				          <div class="modal-header">
+				            <button class="close" data-dismiss="modal">&times;</button>
+				            <h4 class="modal-title">Checkout</h4>
+				          </div>
+				          <div class="modal-body">
+				            Put a form in here
+				          </div>
+				          <div class="modal-footer">
+				            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				            <button type="button" class="btn btn-outline-dark">Complete Purchase</button>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+
+				<div class="row" align="center">
+			      <div class="col">
+			      		<div class="col container-fluid">
+			        			<div id="about">
+			          				<h3>Watch Us at Work</h3>
+										</div>
+										<div class="mx-auto">
+					    					<iframe width="885" height="500" src="https://www.youtube.com/embed/W1Nnz0xpcuc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					     		</div>
+					    </div>
+				   </div>
+				</div>
+
+				<div id="Footer" class="container-full">
+			    	<div class="row">
+			    	   <div class="col">
+			                <h3>Stay Connected with US!</h3>
+			                	<div class="links"><a href="https://www.instagram.com/rosiogvaldez/"target="_blank">Instagram</a></div>
+
+				                <div class="links"><a href="https://www.linkedin.com/in/rosio-valdez-b743b97"target="_blank">LinkedIn</a></div>
+
+				                <div class="links"><a href="https://www.facebook.com/rosiogvaldez"target="_blank">Facebook</a></div>
+
+					            <div class="links"><a href="https://twitter.com/rosiogvaldez"target="_blank">Twitter</a></div>
+			          </div>
+				    </div>
+			   </div>
