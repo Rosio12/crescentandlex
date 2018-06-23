@@ -1,5 +1,25 @@
 angular
 .module('app')
+.controller("HomeController", function($scope, $firebaseArray, CandlesFactory, CartFactory, Notification){
+  //Load firebase users into $scope;
+  var ref = firebase.database().ref('contact');
+
+  $scope.save = function()
+  {
+    ref.push($scope.contact);
+    Notification.success({message:"Thank you for contacting us."});
+  }
+
+  $scope.title = "Home Page";
+  $scope.cart = CartFactory.cart;
+  $scope.candles = CandlesFactory.candles;
+
+  $scope.add = function(candle)
+  {
+      CartFactory.add(candle);
+  }
+
+})
 .factory('CandlesFactory', function(){
     var self = this;
     self.candles = {
@@ -35,28 +55,4 @@ angular
       ]
     };
     return self;
-})
-
-.controller("HomeController", function($scope, $http, CandlesFactory, CartFactory){
-  $scope.title = "Home Page";
-  $scope.cart = CartFactory.cart;
-
-  $scope.counter = 0;
-  $scope.person={
-    name: "Rosio",
-    age: 37,
-    address: "156 S. Crescent Dr",
-    products:[
-    {name:"candle 1", price:55},
-    {name: "candle 2", price:57}
-    ]
-  };
-
-  $scope.candles = CandlesFactory.candles;
-  
-  $scope.add = function(candle)
-  {
-      CartFactory.add(candle);
-  }
-
 });
