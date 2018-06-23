@@ -50,22 +50,23 @@
 	            <div id="pure-scents-products" class="row">
 					<div class="container">
 
-				      <!--TAB PURE SCENTS -->
+	                    <!--TAB PURE SCENTS -->
 					    <div class="row">
 					        <div class="col-6 col-sm-6 col-md-4" ng-repeat="x in candles.pure">
 					            <div class="card">
-					              	<img class="card-img-top" src="{{x.image}}" alt="Card image cap"/>
-					              		<div class="card-body"</div>
-						                <h5 class="card-title pull-left">{{x.title}}</h5>
-														<h5 class="pull-right">{{x.price | currency}}</h5>
-														<br />
-							                <p class="card-text">{{x.description}}</p>
-                              <a href="#" class="btn btn-outline-white">View Product Details</a>
-                              <a href="#" class="btn btn-outline-dark" ng-click="add(x)">Add to Bag</a>
-					              		</div>
+					              	<img ng-if="x.image" class="card-img-top" src="{{x.image}}" alt="Card image cap"/>
+				              		<div class="card-body">
+                                        <h5 class="card-title pull-left">{{x.title}}</h5>
+                                        <h5 class="pull-right">{{x.price | currency}}</h5>
+                                        <br />
+                                        <p class="card-text">{{x.description}}</p>
+                                        <a href="#" class="btn btn-outline-white">View Product Details</a>
+                                        <a href="#" class="btn btn-outline-dark" ng-click="add(x)">Add to Bag</a>
+				              		</div>
 					            </div>
 					        </div>
 				      	</div>
+
 					</div>
 				</div>
 	        </div>
@@ -78,15 +79,15 @@
 					    <div class="row">
 					        <div class="col-6 col-sm-6 col-md-3" ng-repeat="x in candles.wine">
 					            <div class="card">
-					              	<img class="card-img-top" src="{{x.image}}" alt="Card image cap">
-                            <div class="card-body"</div>
-															<h5 class="card-title pull-left">{{x.title}}</h5>
-															<h5 class="pull-right">{{x.price | currency}}</h5>
-															<br />
-                              <p class="card-text">{{x.description}}</p>
-                              <a href="#" class="btn btn-outline-white">View Product Details</a>
-                              <a href="#" class="btn btn-outline-dark" ng-click="add(x)">Add to Bag</a>
-                            </div>
+					              	<img ng-if="x.image" class="card-img-top" src="{{x.image}}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title pull-left">{{x.title}}</h5>
+                                        <h5 class="pull-right">{{x.price | currency}}</h5>
+                                        <br />
+                                        <p class="card-text">{{x.description}}</p>
+                                        <a href="#" class="btn btn-outline-white">View Product Details</a>
+                                        <a href="#" class="btn btn-outline-dark" ng-click="add(x)">Add to Bag</a>
+                                    </div>
 					            </div>
 					        </div>
 
@@ -105,15 +106,15 @@
 				      	<div class="row">
 					        <div class="col-6 col-sm-6 col-md-4"ng-repeat="x in candles.seasonal">
 					            <div class="card">
-					              	<img class="card-img-top" src="{{x.image}}" alt="Card image cap">
-                            <div class="card-body"</div>
-															<h5 class="card-title pull-left">{{x.title}}</h5>
-															<h5 class="pull-right">{{x.price | currency}}</h5>
-															<br />
-                              <p class="card-text">{{x.description}}</p>
-                              <a href="#" class="btn btn-outline-white">View Product Details</a>
-                              <a href="#" class="btn btn-outline-dark" ng-click="add(x)">Add to Bag</a>
-                            </div>
+					              	<img ng-if="x.image" class="card-img-top" src="{{x.image}}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title pull-left">{{x.title}}</h5>
+                                        <h5 class="pull-right">{{x.price | currency}}</h5>
+                                        <br />
+                                        <p class="card-text">{{x.description}}</p>
+                                        <a href="#" class="btn btn-outline-white">View Product Details</a>
+                                        <a href="#" class="btn btn-outline-dark" ng-click="add(x)">Add to Bag</a>
+                                    </div>
 					            </div>
 					        </div>
 
@@ -122,51 +123,50 @@
 				</div>
 	        </div>
 
-<!--Destination Scents -->
+            <!--Destination Scents -->
 	        <div class="tab-pane" id="destinations-scents">
-
 	            <div id="wine-experiences-products" class="row">
 		            <div class="container">
-								    <div class="row">
-								        <div class="col-6 col-sm-6 col-md-3" ng-repeat="x in candles.destination">
-								            <div class="card">
-								              	<img class="card-img-top" src="{{x.image}}" alt="Card image cap">
-			                            <div class="card-body"</div>
-																		<h5 class="card-title pull-left">{{x.title}}</h5>
-																		<h5 class="pull-right">{{x.price | currency}}</h5>
-																		<br/>
-			                              <p class="card-text">{{x.description}}</p>
-			                              <a href="#" class="btn btn-outline-white">View Product Details</a>
-			                              <a href="#" class="btn btn-outline-dark" ng-click="add(x)" >Add to Bag</a>
-			                            </div>
-								            	</div>
-								        </div>
-								    	</div>
-									</div>
-								</div>
+					    <div class="row">
+					        <div class="col-6 col-sm-6 col-md-3" ng-repeat="x in candles.destination">
+					            <div class="card">
+					              	<img ng-if="x.image" class="card-img-top" src="{{x.image}}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title pull-left">{{x.title}}</h5>
+                                        <h5 class="pull-right">{{x.price | currency}}</h5>
+                                        <br/>
+                                        <p class="card-text">{{x.description}}</p>
+                                        <a href="#" class="btn btn-outline-white">View Product Details</a>
+                                        <a href="#" class="btn btn-outline-dark" ng-click="add(x)" >Add to Bag</a>
+                                    </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+				</div>
 	      	</div>
 
     	</div>
 
-				    <!-- Modal -->
-				    <div id="checkoutModal" class="modal fade">
+			    <!-- Modal -->
+			    <div id="checkoutModal" class="modal fade">
 
-				      <div class="modal-dialog">
-				        <div class="modal-content">
-				          <div class="modal-header">
-				            <button class="close" data-dismiss="modal">&times;</button>
-				            <h4 class="modal-title">Checkout</h4>
-				          </div>
-				          <div class="modal-body">
-				            Put a form in here
-				          </div>
-				          <div class="modal-footer">
-				            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-				            <button type="button" class="btn btn-outline-dark">Complete Purchase</button>
-				          </div>
-				        </div>
-				      </div>
-				    </div>
+			      <div class="modal-dialog">
+			        <div class="modal-content">
+			          <div class="modal-header">
+			            <button class="close" data-dismiss="modal">&times;</button>
+			            <h4 class="modal-title">Checkout</h4>
+			          </div>
+			          <div class="modal-body">
+			            Put a form in here
+			          </div>
+			          <div class="modal-footer">
+			            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+			            <button type="button" class="btn btn-outline-dark">Complete Purchase</button>
+			          </div>
+			        </div>
+			      </div>
+			    </div>
 
 				<div class="row" align="center">
 			      <div class="col">

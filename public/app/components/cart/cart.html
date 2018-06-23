@@ -1,5 +1,4 @@
 <header>
-    <ul>
       <ul id="shopbag" class="list-group">
           <li class="dropdown list-group-item">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
@@ -9,9 +8,9 @@
               </a>
               <ul class="dropdown-menu cart-list">
                   <li ng-repeat="x in cart">
-                      <a href="#" class="photo"><img src="IMAGE_ADDRESS" class="cart-thumb" alt="" /></a>
-                      <h6><a href="#">Delica omtantur </a></h6>
-                      <p>2x - <span class="price">$99.99</span></p>
+                      <a href="#" class="photo">Image here</a>
+                      <h6><a href="#">{{x.title}} </a></h6>
+                      <p>{{x.qty}} - <span class="price">{{x.cost | currency}}</span></p>
                   </li>
 
                   -- More List --
@@ -22,11 +21,4 @@
               </ul>
           </li>
       </ul>
-
-      <ul>
-				<li ng-repeat="x in cart">
-					{{x.title}} {{x.cost | currency}}
-				</li>
-			</ul>
-    </ul>
 </header>
