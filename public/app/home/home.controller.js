@@ -1,7 +1,7 @@
 angular
 .module('app')
 .factory('CandlesFactory', function(){
-  var candles= {
+  var candles = {
   pure:
   [
     {title:'Pure Lily of the Valley', description:'The lace-like flower is among the softer and sweeter of the white lily family. This tradtional and rare scent is captured in its purest form in our Pure Collection.', price:45, image:"images/PURE_SCENTS/Pure_lily_of_the_valley.jpg" },
@@ -50,7 +50,12 @@ return candles;
     {name: "candle 2", price:57}
     ]
   };
-  $scope.candles=CandlesFactory.candles;
+
+  //.controller(‘CandleController’, function($scope, CandleFactory) {
+  //   $scope.candles = CandleFactory.candles;
+  //})
+
+  $scope.candles = CandlesFactory.candles;
   $scope.add = function(candle)
   {
     if(!$scope.cart[candle.title])

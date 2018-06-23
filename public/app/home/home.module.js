@@ -19,6 +19,12 @@ angular
     url: '/contact',
     controller: 'HomeController',
     templateUrl: 'app/home/contact.html'
+  })
+  .state({
+      name: 'login',
+      url: '/login',
+      controller: 'HomeController',
+      templateUrl: 'app/home/login.html'
 
   });
 })
